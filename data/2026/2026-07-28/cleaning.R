@@ -14,6 +14,8 @@ occurrences <- bind_rows(
 
 weather <- ecotourism::weather
 
+tourism_region <- ecotourism::tourism_region
+
 tourism <- ecotourism::tourism_quarterly |>
   left_join(tourism_region, by = "region_id") |>
   rename(ws_id = ws_id.x) |>
